@@ -1,8 +1,5 @@
 FROM alpine:3.12
 
-# Устанавливаем нужные утилиты
-COPY entrypoint.sh /entrypoint.sh
-
 RUN apk add --no-cache \
     bash \
     curl \
@@ -14,7 +11,8 @@ RUN apk add --no-cache \
     python3 \
     py3-pip \
     ansible \
-    && chmod +x /entrypoint.sh
+    && git clone https://github.com/gekt0rr/devops-deployer.git \
+    && chmod +x /devops-deployer/entrypoint.sh 
 
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/devops-deployer/entrypoint.sh"]

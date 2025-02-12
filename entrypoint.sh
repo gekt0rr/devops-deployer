@@ -1,13 +1,13 @@
 #!/bin/bash
 set -e  # Останавливаем выполнение при ошибке
 
-# Значения по умолчанию
-DEFAULT_REPO="https://github.com/gekt0rr/devops-deployer.git"
-REPO_URL=${REPO_URL:-$DEFAULT_REPO}
+# # Значения по умолчанию
+# DEFAULT_REPO="https://github.com/gekt0rr/devops-deployer.git"
+# REPO_URL=${REPO_URL:-$DEFAULT_REPO}
 
-echo "📥 Клонируем репозиторий: $REPO_URL"
-git clone "$REPO_URL" /repo
-cd /repo
+# echo "📥 Клонируем репозиторий: $REPO_URL"
+# git clone "$REPO_URL" /repo
+# cd /repo
 
 # Проверяем, есть ли `deploy.sh`
 if [[ -f "deploy.sh" ]]; then
