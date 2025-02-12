@@ -1,4 +1,4 @@
-FROM alpine:3.12
+FROM alpine:3.11
 
 RUN apk add --no-cache \
     bash \
@@ -12,6 +12,6 @@ RUN apk add --no-cache \
     py3-pip \
     ansible \
     && git clone https://github.com/gekt0rr/devops-deployer.git \
-    && chmod +x /devops-deployer/*.sh
+    && chmod +x /devops-deployer/scripts/*.sh
 
 ENTRYPOINT ["/devops-deployer/scripts/deploy.sh"]
