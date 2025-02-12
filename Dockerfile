@@ -12,7 +12,6 @@ RUN apk add --no-cache \
     py3-pip \
     ansible \
     && git clone https://github.com/gekt0rr/devops-deployer.git \
-    && chmod +x /devops-deployer/entrypoint.sh 
+    && chmod +x /devops-deployer/*.sh
 
-
-ENTRYPOINT ["/devops-deployer/entrypoint.sh"]
+ENTRYPOINT ["/devops-deployer/scripts/deploy.sh"]
