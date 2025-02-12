@@ -13,12 +13,16 @@
 
 ## 🔹 Быстрый старт
 
-1. **Соберите image**:
+1. **Склонируйте репозиторий**:
+   ```sh
+   git clone https://github.com/gekt0rr/devops-deployer.git && cd devops-deployer
+   ```
+2. **Соберите image**:
    ```sh
    docker build -t devops-deployer .
    ```
-2. **Запустите контейнер**:
+3. **Запустите контейнер**:
    ```sh
-   run gekt0r/devops-deployer
+   run devops-deployer
    ```
    
